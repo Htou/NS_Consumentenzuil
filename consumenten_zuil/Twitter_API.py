@@ -1,6 +1,3 @@
-pip install TwitterAPI
-from TwitterAPI import TwitterAPI
-api = TwitterAPI(consumer_key, consumer_secret, access_token_key, access_token_secret)
 
 import json
 
@@ -14,4 +11,10 @@ with open('twitter_credentials.json', 'w') as file:
     json.dump(credentials, file)
 
 from TwitterAPI import TwitterAPI
-api = TwitterAPI(consumer_key, consumer_secret, access_token_key, access_token_secret)
+api = TwitterAPI('IGS3kyp7lo1WoIaF9e1eUY8jK',
+                 'AldbB9aspuKtKJghFJKHAlicth2s0dKABNqChFP9qmOHeiEyHg',
+                 '1189156220092989443-BPUYdAsgmq1V08PWQtfZh3siFZ2Gwb',
+                 'vggdKmRTfljwEms7virGlmg57PRE9hqBC5aZ4tFqfeHm0')
+
+r = api.request('statuses/update', {'status':'This is a tweet!'})
+print(r.status_code)
