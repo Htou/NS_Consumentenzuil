@@ -7,3 +7,4 @@ while True:
 
 outfile = open('berichten.txt', 'a')
 outfile.write(invul + '\n')
+outfile.close()
