@@ -1,1 +1,1 @@
-print("Dit is een test bestand")
+print("Dit is een test betand")
