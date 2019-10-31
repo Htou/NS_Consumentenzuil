@@ -31,7 +31,4 @@ def fetch_tweets():
     posts = list()
     for post in data['statuses']:
         posts.append([post['text'], post['created_at'], post['user']['screen_name']])
-    print(posts)
-
-
-fetch_tweets()
+    return posts
