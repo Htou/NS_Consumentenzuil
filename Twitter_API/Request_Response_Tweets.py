@@ -28,3 +28,6 @@ posts = list()
 for post in data['statuses']:
     posts.append([post['text'], post['created_at'], post['user']['screen_name']])
 print(posts)
+
+#def test():
+#    print("Hello")
