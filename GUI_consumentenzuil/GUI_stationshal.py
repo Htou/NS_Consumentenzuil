@@ -1,23 +1,15 @@
-from t
 from tkinter import *
+from Twitter_API.Request_Response_Tweets import fetch_tweets
+
+fetch_tweets()
 
 root = Tk()
 
-screenWidth = root.winfo_screenwidth()
-screenHeight = root.winfo_screenheight()
-
-root.overrideredirect(1)
-root.geometry('%dx%d+0+0' % (screenWidth, screenHeight))
-root.configure(background='#000000')  # black
-
-
-canvas = Canvas(
-    background='#000000',  # black
-    borderwidth=-5,
-    height=500,
-    relief='flat',
-    width=500)
-
-canvas.pack(expand=1, fill=BOTH)
+label = Label(master=root,
+              text=fetch_tweets(),
+              background='yellow',
+              foreground='blue',
+              font=('Helvetica', 16, 'bold italic'))
+label.pack()
 
 root.mainloop()

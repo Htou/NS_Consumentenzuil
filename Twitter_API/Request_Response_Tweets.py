@@ -1,6 +1,8 @@
 import oauth2 as oauth
 import json
 
+from pip._internal.commands.list import tabulate
+
 
 def Request(url, key, secret, http_method='GET', post_body=b'', http_headers=None):
     consumer = oauth.Consumer(key="IGS3kyp7lo1WoIaF9e1eUY8jK",
@@ -24,10 +26,12 @@ request, response = Request(
 data = json.loads(response)
 tweets = data['statuses']
 
-posts = list()
-for post in data['statuses']:
-    posts.append([post['text'], post['created_at'], post['user']['screen_name']])
-print(posts)
 
-#def test():
-#    print("Hello")
+def fetch_tweets():
+    posts = list()
+    for post in data['statuses']:
+        posts.append([post['text'], post['created_at'], post['user']['screen_name']])
+    print(posts)
+
+
+fetch_tweets()
