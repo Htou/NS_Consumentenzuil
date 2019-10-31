@@ -1,4 +1,5 @@
 import time
+
 vorige = 0
 
 while True:
@@ -21,5 +22,3 @@ while True:
         vorige = counter
         pass
     time.sleep(6)
-
-

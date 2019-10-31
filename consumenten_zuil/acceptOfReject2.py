@@ -28,10 +28,7 @@ while True:
     outfile1.write('')
     outfile1.close()
 
-
     time.sleep(6)
 
+
 def twitter(message):
-
-
-

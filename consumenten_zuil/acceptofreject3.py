@@ -50,6 +50,3 @@ while True:
     outfile1.close()
 
     time.sleep(6)
-
-
-
