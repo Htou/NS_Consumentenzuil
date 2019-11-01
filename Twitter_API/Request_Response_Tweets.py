@@ -29,5 +29,5 @@ def fetch_tweets():
     "Pakt tweets, datums en gebruikts uit tweets:data, deze worden geformateerd naar strings en elk op een eigen regel gezet als 1 object,"
     posts = list()
     for post in data['statuses']:
-        posts.append("{}'\n'{}'\n'{}".format(post['text'], post['created_at'], post['user']['screen_name'])) #tweets, datums en users worden bewaard in een list
+        posts.append("{}'\n'{}'\n'{}".format(post['text'], post['created_at'], post['user']['screen_name'])) #tweets, datums en users worden bewaard in een list: posts
     return posts
