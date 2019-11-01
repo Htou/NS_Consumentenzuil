@@ -1,5 +1,9 @@
-# NS_Consumentenzuil
+# NS Consumentenzuil
 HU_miniproject
+
+Dit is onze eerste miniproject van de opleiding HBO-ICT in Utrecht. 
+We  hebben een samen een programma geschreven
+
 
 Voordat het programma werkt moet eerst de TwitterAPI geinstalleerd worden.
 Hiervoor ga je naar je Command Prompt en typ je in: pip install TwitterAPI.
