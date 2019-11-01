@@ -32,7 +32,7 @@ while True:
                                  '1189156220092989443-BPUYdAsgmq1V08PWQtfZh3siFZ2Gwb',
                                  'vggdKmRTfljwEms7virGlmg57PRE9hqBC5aZ4tFqfeHm0')   #twitterkeys, maakt het mogelijk om te plaatsen op switter
 
-                r = api.request('statuses/update', {'status': content}) #plaats de inhoud van content (dus het bericht) op twitter
+                r = api.request('statuses/update', {'status': content}) #plaats de inhoud van content (dus het bericht)  op twitter
                 print(r.status_code)
 
                 break
