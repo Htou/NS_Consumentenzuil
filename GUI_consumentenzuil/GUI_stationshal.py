@@ -1,49 +1,17 @@
 from tkinter import *
-from Twitter_API.Request_Response_Tweets import fetch_tweets
-
+from Twitter_API.Request_Response_Tweets import fetch_tweets #pakt de resultaat van fetch_tweets list.
 root = Tk()
 
-label = Label(master=root,
-              text=fetch_tweets()[0],
-              background='yellow',
-              foreground='blue',
-              font=('Helvetica', 16, 'bold italic'))
+stock = []
+for i in range(len(fetch_tweets())): #loopt door lijst van list obejects van fetch_tweets.
 
-label2 = Label(master=root,
-               text=fetch_tweets()[1],
-               background='blue',
-               foreground='yellow',
-               font=('Helvetica', 16, 'bold italic'))
+    label = Label(master=root,              #Maakt label aan van welke list index
+              text=fetch_tweets()[i],       #pakt strings uit list en gebruikt ze als text
+              background= '#BCA136',
+              foreground='white',
+              font=('Helvetica', 16, 'bold'))
+    label.grid(row=i, column=0, pady=5) #layout van labels
 
-label3 = Label(master=root,
-               text=fetch_tweets()[2],
-               background='yellow',
-               foreground='blue',
-               font=('Helvetica', 16, 'bold italic'))
-
-label4 = Label(master=root,
-               text=fetch_tweets()[3],
-               background='blue',
-               foreground='yellow',
-               font=('Helvetica', 16, 'bold italic'))
-
-label5 = Label(master=root,
-               text=fetch_tweets()[4],
-               background='yellow',
-               foreground='blue',
-               font=('Helvetica', 16, 'bold italic'))
-
-label6 = Label(master=root,
-               text=fetch_tweets()[5],
-               background='blue',
-               foreground='yellow',
-               font=('Helvetica', 16, 'bold italic'))
-
-label.pack()
-label2.pack()
-label3.pack()
-label4.pack()
-label5.pack()
-label6.pack()
+    stock.append(label)  #slaat alle labels op in stock list
 
 root.mainloop()
