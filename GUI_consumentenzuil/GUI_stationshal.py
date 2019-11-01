@@ -12,4 +12,4 @@ for i in range(len(fetch_tweets())):  # loopt door lijst van list obejects van f
                   font=('Helvetica', 16, 'bold'))
     label.grid(row=i, column=0, pady=5)  # layout van labels
     stock.append(label)  # slaat alle labels op in stock list
-    root.mainloop()
+root.mainloop()

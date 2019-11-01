@@ -30,4 +30,4 @@ def fetch_tweets():
     posts = list()
     for post in data['statuses']:
         posts.append("{}'\n'{}'\n'{}".format(post['text'], post['created_at'], post['user']['screen_name'])) #tweets, datums en users worden bewaard in een list: posts
-    return posts
+    return (posts)
